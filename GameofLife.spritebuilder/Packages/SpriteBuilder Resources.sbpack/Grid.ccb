@@ -103,7 +103,7 @@
 				<key>value</key>
 				<array>
 					<string></string>
-					<string>GameOfLifeAssets 2/Assets/grid.png</string>
+					<string>GameOfLifeAssets/Assets/grid.png</string>
 				</array>
 			</dict>
 			<dict>

@@ -112,7 +112,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>GameOfLifeAssets 2/BackgroundImage/background.png</string>
+							<string>GameOfLifeAssets/BackgroundImage/background.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -148,6 +148,8 @@
 						<array/>
 					</dict>
 				</array>
+				<key>selected</key>
+				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>
@@ -210,8 +212,6 @@
 						<string>Grid.ccb</string>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>
@@ -298,7 +298,7 @@
 										<key>value</key>
 										<array>
 											<string></string>
-											<string>GameOfLifeAssets 2/Assets/microscope.png</string>
+											<string>GameOfLifeAssets/Assets/microscope.png</string>
 										</array>
 									</dict>
 									<dict>
@@ -1024,7 +1024,7 @@
 												<key>displayName</key>
 												<string>CCLabelTTF</string>
 												<key>memberVarAssignmentName</key>
-												<string>pop</string>
+												<string></string>
 												<key>memberVarAssignmentType</key>
 												<integer>1</integer>
 												<key>properties</key>
@@ -1376,7 +1376,7 @@
 										<key>value</key>
 										<array>
 											<string></string>
-											<string>GameOfLifeAssets 2/Assets/balloon.png</string>
+											<string>GameOfLifeAssets/Assets/balloon.png</string>
 										</array>
 									</dict>
 									<dict>
@@ -1540,7 +1540,7 @@
 										<key>value</key>
 										<array>
 											<string></string>
-											<string>GameOfLifeAssets 2/Buttons/pause.png</string>
+											<string>GameOfLifeAssets/Buttons/pause.png</string>
 										</array>
 									</dict>
 									<dict>
@@ -1551,7 +1551,7 @@
 										<key>value</key>
 										<array>
 											<string></string>
-											<string>GameOfLifeAssets 2/Buttons/pause-pressed.png</string>
+											<string>GameOfLifeAssets/Buttons/pause-pressed.png</string>
 										</array>
 									</dict>
 									<dict>
@@ -1866,7 +1866,7 @@
 										<key>value</key>
 										<array>
 											<string></string>
-											<string>GameOfLifeAssets 2/Buttons/play.png</string>
+											<string>GameOfLifeAssets/Buttons/play.png</string>
 										</array>
 									</dict>
 									<dict>
@@ -1877,7 +1877,7 @@
 										<key>value</key>
 										<array>
 											<string></string>
-											<string>GameOfLifeAssets 2/Buttons/play-pressed.png</string>
+											<string>GameOfLifeAssets/Buttons/play-pressed.png</string>
 										</array>
 									</dict>
 									<dict>
