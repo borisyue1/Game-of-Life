@@ -49,4 +49,71 @@ class Grid: CCSprite {
             }
         }
     }
+    override func touchBegan(touch: CCTouch!, withEvent event: CCTouchEvent!) {
+        var touchLocation = touch.locationInNode(self)
+        
+        var creature = creatureForTouchPosition(touchLocation)
+        
+        creature.isAlive = !creature.isAlive
+    }
+    func creatureForTouchPosition(touchPosition: CGPoint) -> Creature {
+        var row = Int(touchPosition.y / cellHeight)
+        var column = Int(touchPosition.x / cellWidth)
+        return gridArray[row][column]
+    }
+    func evolveStep(){
+        //update each Creature's neighbor count
+        countNeighbors()
+        
+        //update each Creature's state
+        updateCreatures()
+        
+        //update the generation so the label's text will display the correct generation
+        generation++
+    }
+    func countNeighbors(){
+        for row in 0..<gridArray.count {//like 2d arrays in java
+            for column in 0..<gridArray[row].count {
+                
+                var currentCreature = gridArray[row][column]
+                currentCreature.livingNeighborsCount = 0
+                
+                for x in (row - 1)...(row + 1) {
+                    for y in (column - 1)...(column + 1) {
+                        
+                        var validIndex = isValidIndex(x: x, y: y)
+                        
+                        if validIndex && !(x == row && y == column) {//if loc is valid and doesnt equal current loc
+                            
+                            var neighbor = gridArray[x][y]
+                            
+                            if neighbor.isAlive {
+                                currentCreature.livingNeighborsCount++
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    func isValidIndex(#x: Int, y: Int) -> Bool {
+        return !(x < 0 || y < 0 || x >= GridRows || y >= GridColumns)
+    }
+    func updateCreatures(){
+        totalAlive = 0
+        for r in 0..<GridRows{
+            for c in 0..<GridColumns{
+                let liveneighbors = gridArray[r][c].livingNeighborsCount
+                if(liveneighbors == 3){
+                    gridArray[r][c].isAlive = true
+                }
+                else if liveneighbors <= 1 || liveneighbors >= 4 {
+                    gridArray[r][c].isAlive = false
+                }
+                if gridArray[r][c].isAlive{
+                    totalAlive++
+                }
+            }
+        }
+    }
 }
